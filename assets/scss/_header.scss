@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #2a2f36;
+}
+.header-title:hover {
+  color: #4ecdc4;
+}
+@media only screen and (min-width: 768px) {
+  .header-title {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 1220px) {
+  .header-title {
+    font-size: 30px;
+  }
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin: 0
+}
+
+.menu-list-item {
+  margin-left: 15px;
+  font-size: 15px;
+  padding: 0 0 3px;
+  font-weight: 500;
+}

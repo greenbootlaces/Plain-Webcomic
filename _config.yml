@@ -13,14 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your Comic Title
+title: Elena Renn
 tab_title: Your Comic! #This text shows up on the browser tab
 email:
 description: Here's the description of your comic!
 url: "https://greenbootlaces.github.io/Plain-Webcomic/" # the base hostname & protocol for your site
 
 # Comic Social Media
-twitter_username: http://twitter.com/peahat
+twitter_username: https://twitter.com/greenbootlaces
 tumblr_username: http://peahat.tumblr.com
 patreon_username: peahat
 
@@ -33,4 +33,14 @@ author_patreon_username:
 
 # Build settings
 markdown: kramdown
-theme: minima
+
+# Sass configuration
+sass:
+  sass_dir  : assets/scss
+  style     : compressed # expanded
+
+defaults:
+  - scope:
+      path: "comics"
+    values:
+      permalink: "/:categories/:title"
