@@ -7,13 +7,19 @@ layout: default
 
 <div class="comic-body">
   {{ content }}
-  <ul class="pager">
+  <ul class="pagination">
     {% unless page_number == 1 %}
+      <li>
+        <a
+          class="btn btn-outline-secondary"
+          href="{{ site.url }}/{{ page.categories | join: '/' }}/001#top-page"
+          >First</a>
+      </li>
       <li>
           <a
             class="btn btn-outline-secondary"
             href="{{ site.url }}/{{ page.categories | join: '/' }}/{{ page.title | minus: 1  | prepend: '000' | slice: -3, 3 }}#top-page"
-            >PREVIOUS</a
+            >Previous</a
           >
       </li>
     {% endunless %}
@@ -22,7 +28,14 @@ layout: default
         <a
           class="btn btn-outline-primary"
           href="{{ site.url }}/{{ page.categories | join: '/' }}/{{ page.title | plus: 1  | prepend: '000' | slice: -3, 3 }}#top-page"
-          >NEXT</a
+          >Next</a
+        >
+      </li>
+      <li>
+        <a
+          class="btn btn-outline-secondary"
+          href="{{ site.url }}/{{ page.categories | join: '/' }}/{{ comic.size | prepend: '000' | slice: -3, 3 }}#top-page"
+          >Latest</a
         >
       </li>
     {% endif %}

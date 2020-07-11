@@ -7,3 +7,17 @@
 .comic-image {
   width: 100%
 }
+
+.pagination {
+  // display: flex;
+  list-style: none;
+  // justify-content: space-between;
+  // align-items: center;
+  max-width: 50%;
+  margin: 0 auto;
+
+  li {
+    margin-left: .5rem;
+    display: inline-block;
+  }
+}
