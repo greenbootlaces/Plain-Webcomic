@@ -1,21 +1,30 @@
 ---
 layout: default
 ---
+{% assign comic_name = page.categories | last %}
+{% assign comic = site.categories[comic_name] %}
+{% assign page_number = page.title | plus: 0 %}
 
-{{ content }}
-<ul class="pager">
-  <li>
-    <a
-      class="btn btn-outline-secondary"
-      href="{{ site.url }}/{{ page.categories | join: '/' }}/{{ page.title | minus: 1  | prepend: '000' | slice: -3, 3 }}#top-page"
-      >PREVIOUS</a
-    >
-  </li>
-  <li>
-    <a
-      class="btn btn-outline-primary"
-      href="{{ site.url }}/{{ page.categories | join: '/' }}/{{ page.title | plus: 1  | prepend: '000' | slice: -3, 3 }}#top-page"
-      >NEXT</a
-    >
-  </li>
-</ul>
+<div class="comic-body">
+  {{ content }}
+  <ul class="pager">
+    <li>
+      {% unless page_number == 1 %}
+        <a
+          class="btn btn-outline-secondary"
+          href="{{ site.url }}/{{ page.categories | join: '/' }}/{{ page.title | minus: 1  | prepend: '000' | slice: -3, 3 }}#top-page"
+          >PREVIOUS</a
+        >
+      {% endunless %}
+    </li>
+    <li>
+      {% if page_number < comic.size %}
+        <a
+          class="btn btn-outline-primary"
+          href="{{ site.url }}/{{ page.categories | join: '/' }}/{{ page.title | plus: 1  | prepend: '000' | slice: -3, 3 }}#top-page"
+          >NEXT</a
+        >
+      {% endif %}
+    </li>
+  </ul>
+</div>
