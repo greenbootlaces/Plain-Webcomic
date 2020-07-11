@@ -6,6 +6,11 @@ layout: default
 {% assign page_number = page.title | plus: 0 %}
 
 <div class="comic-body">
+  {% if page.banner_image %}
+    <div class="banner">
+      <img src="{{site.url}}{{ page.banner_image }}">
+    </div>
+  {% endif%}
   {{ content }}
   <ul class="pagination">
     {% unless page_number == 1 %}

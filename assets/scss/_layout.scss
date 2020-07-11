@@ -1,5 +1,15 @@
+html, body {
+  height: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   margin: 0 1rem;
+  flex: 1 0 auto;
 }
 
 .masonry {
@@ -24,12 +34,47 @@
   // filter: brightness(50%);
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: $medium-gray-color;
+  color: $black-color;
+  flex-shrink: 0;
 
+
+  .social {
+    list-style: none;
+    padding: 0 0;
+    align-self: flex-end;
+    display: flex;
+
+    li {
+      margin-right: .5rem
+    }
+  }
+}
 
 
 @media (min-width: 768px) {
   .masonry-brick {
     width: 33.33%;
   }
+}
 
+.comics-list {
+  display: flex;
+  flex-direction: column;
+
+  .comics-list-item {
+    display: flex;
+    align-items: flex-start;
+
+    img {
+      height: 150px;
+      width: 100px;
+      object-fit: contain;
+    }
+  }
 }

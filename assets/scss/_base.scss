@@ -365,3 +365,12 @@ template {
 a {
   text-decoration: none;
 }
+
+.small-text {
+  font-size: .7rem;
+  font-weight: 300;
+}
+
+.red {
+  color: $color-red;
+}

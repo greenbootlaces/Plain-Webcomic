@@ -2,19 +2,25 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  .banner img {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    background: gray;
+  }
 }
+
 
 .comic-image {
   width: 100%
 }
 
 .pagination {
-  // display: flex;
   list-style: none;
-  // justify-content: space-between;
-  // align-items: center;
   max-width: 50%;
   margin: 0 auto;
+  padding: 0;
 
   li {
     margin-left: .5rem;

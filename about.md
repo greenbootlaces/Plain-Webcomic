@@ -9,10 +9,6 @@ Nulla scelerisque massa erat, ac fermentum tellus luctus a. Quisque turpis massa
 
 Curabitur auctor nulla eros, et placerat sapien auctor eget. Duis sed enim est. Vivamus sapien lectus, venenatis nec sapien eget, pharetra consectetur lorem. Nunc nec purus suscipit, suscipit diam non, malesuada lorem.
 
-{% include socialmedia.html %}
-
 # About the Author
 
 Curabitur auctor nulla eros, et placerat sapien auctor eget. Duis sed enim est. Vivamus sapien lectus, venenatis nec sapien eget, pharetra consectetur lorem. Nunc nec purus suscipit, suscipit diam non, malesuada lorem.
-
-{% include authorsocialmedia.html %}
