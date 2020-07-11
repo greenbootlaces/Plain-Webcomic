@@ -1,0 +1,12 @@
+---
+layout: default
+permalink: /comics/
+---
+
+
+<!-- {{ site.categories | inspect }} -->
+{% for category in site.categories %}
+  {% unless category[0] == "comics" %}
+    <a href="{{ site.url }}/comics/{{ category[0] }}/001.html">{{ category[0] }}</a>
+  {% endunless %}
+{% endfor %}

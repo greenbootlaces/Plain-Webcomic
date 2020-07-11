@@ -1,31 +1,56 @@
+<input id="main-menu-checkbox" type="checkbox" />
 <header class="header">
   <a href="/" class="header-title">
     Elena Renn
   </a>
-  <div class="menu">
-    <div class="menu__toggle js-menu-toggle">
-      <div class="menu__toggle__icon"><span></span></div>
-    </div>
+  <label
+    for="main-menu-checkbox"
+    class="menu-toggle"
+    aria-label="Open main menu"
+  >
+    <span class="sr-only">Open main menu</span>
+    <span class="fa fa-bars" aria-hidden="true"></span>
+  </label>
+
+  <nav
+    class="main-menu"
+    role="navigation"
+    aria-expanded="false"
+    aria-label="Main menu"
+  >
+    <label for="main-menu-checkbox" class="menu-close">
+      <span class="sr-only">Close main menu</span>
+      <span class="fa fa-close" aria-hidden="true"></span>
+    </label>
+
     <ul class="menu-list">
       <li class="menu-list-item">
-        <a href="/" class="menu__list__item__link cc-active active-link">Art</a>
+        <a href="/">Art</a>
       </li>
 
       <li class="menu-list-item">
-        <a href="/comic1/001" class="menu__list__item__link">Comics</a>
+        <a href="/comics/">Comics</a>
       </li>
 
       <li class="menu-list-item">
-        <a href="/about" class="menu__list__item__link">About</a>
+        <a href="/about">About</a>
       </li>
 
       <li class="menu-list-item">
-        <a href="/contact" class="menu__list__item__link">Contact</a>
+        <a href="/contact">Contact</a>
       </li>
 
       <li class="menu-list-item">
-        <a href="/contact" class="menu__list__item__link">Store</a>
+        <a href="/contact">Store</a>
       </li>
     </ul>
-  </div>
+
+  </nav>
+  <label
+    for="main-menu-checkbox"
+    class="backdrop"
+    tabindex="-1"
+    aria-hidden="true"
+    hidden
+  ></label>
 </header>
