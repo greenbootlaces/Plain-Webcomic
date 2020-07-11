@@ -17,7 +17,8 @@ title: Elena Renn
 tab_title: Your Comic! #This text shows up on the browser tab
 email:
 description: Here's the description of your comic!
-url: "https://greenbootlaces.github.io/Plain-Webcomic/" # the base hostname & protocol for your site
+url           : "https://greenbootlaces.github.io" # site url
+baseurl       : "/Plain-Webcomic" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 
 # Comic Social Media
 twitter_username: https://twitter.com/greenbootlaces
