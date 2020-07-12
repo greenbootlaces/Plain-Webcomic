@@ -3,10 +3,14 @@ layout: default
 permalink: /comics/
 ---
 
-
-<!-- {{ site.categories | inspect }} -->
-{% for category in site.categories %}
-  {% unless category[0] == "comics" %}
-    <a href="{{ site.url }}/comics/{{ category[0] }}/001.html">{{ category[0] }}</a>
-  {% endunless %}
-{% endfor %}
+<div class="comics-list">
+  {% for category in site.categories %}
+    {% unless category[0] == "comics" %}
+    <div class="comics-list-item">
+      {% assign comic_first_page = category[1][0] %}
+      <img src="{{ site.url }}/{{ comic_first_page.categories | join: '/' }}/pages/{{ comic_first_page.title }}.jpeg">
+      <a href="{{ site.url }}/comics/{{ category[0] }}/001.html">{{ category[0] | capitalize }}</a>
+    </div>
+    {% endunless %}
+  {% endfor %}
+</div>

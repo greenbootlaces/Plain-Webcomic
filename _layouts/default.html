@@ -7,12 +7,9 @@ layout: compress
   {% include head.html %}
 
   <body>
-
     <div class="container">
       {% include header.html %}
       <div class="row">
-
-
         <div class="col-md-12 center">
           <div class="panel center col-md-12">
             {{ content }}
@@ -20,6 +17,22 @@ layout: compress
         </div>
       </div>
     </div>
+    <footer>
+      <div>© 2018 - {{ site.time | date: '%Y' }} Elena Renn <span class="small-text">· &lt;/&gt; Made with <span class="red">&hearts;</span> by <a href="https://vjustov.me/">vjustov</a> and powered by <a href="https://jekyllrb.com/">Jekyll</a> </span></div>
+      <ul class="social">
+        <li>
+          <a href="{{ site.author_twitter_username }}">
+            <i class="fa fa-twitter" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li>
+          <a href="{{ site.author_tumblr_username }}">
+            <i class="fa fa-tumblr" aria-hidden="true"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+
     {% include scripts.html %}
   </body>
 </html>

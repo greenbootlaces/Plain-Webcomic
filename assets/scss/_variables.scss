@@ -4,7 +4,7 @@ $base-font-family: 'Poppins', sans-serif;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: 16px;
 
 // Line height
 $base-line-height: 1.5;
@@ -19,6 +19,7 @@ $base-z-index: 0;
 // Colors
 $primary-color: #000;
 $action-color: $primary-color;
+$color-red: rgb(187, 8, 8);
 $white-color: #fff;
 $black-color: #000;
 $blue-color: #0086B3;
@@ -44,3 +45,11 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
+
+// Defining values
+$small-range:   (0rem, 48rem);       /* 0, 640px */
+$large-range:   (48rem, 90rem);  /* 1025px, 1440px */
+
+// Defining media queries
+$screen:       "only screen" !default;
+$medium-up:    "#{$screen} and (min-width:#{lower-bound($large-range)})" !default;
