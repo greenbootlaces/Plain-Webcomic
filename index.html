@@ -7,11 +7,11 @@ permalink: /index.html
 <div class="masonry">
   {% for image in site.static_files %}
     {% if image.path contains 'assets/images' %}
-      <a href="{{image.path}}">
-        <figure class="masonry-brick">
+      <figure class="masonry-brick">
+        <a href="{{image.path}}">
           <img class="masonry-img" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.name }}" />
-        </figure>
-      </a>
+        </a>
+      </figure>
     {% endif %}
   {% endfor %}
 </div>
