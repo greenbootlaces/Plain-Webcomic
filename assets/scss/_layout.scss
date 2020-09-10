@@ -5,11 +5,13 @@ html, body {
 body{
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .container {
   margin: 0 1rem;
   flex: 1 0 auto;
+  max-width: 800px;
 }
 
 .masonry {
@@ -36,12 +38,18 @@ body{
 
 footer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 0 1rem;
-  background-color: $medium-gray-color;
-  color: $black-color;
-  flex-shrink: 0;
+  width: 100%;
+
+  .area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    color: $black-color;
+    flex-shrink: 0;
+  }
 
 
   .social {
