@@ -1,1 +1,7 @@
-<img class="comic-image" src="{{ site.url }}/{{ page.categories | join: '/' }}/pages/{{ page.title }}.jpeg">
+{% capture comic_image_path %}{{ page.categories | join: '/' }}/pages/{{ page.title }}{% endcapture %}
+
+{% for image in site.static_files %}
+  {% if image.path contains comic_image_path %}
+    <img class="comic-image" src="{{image.path}}">
+  {% endif %}
+{% endfor %}
